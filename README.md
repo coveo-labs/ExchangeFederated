@@ -1,7 +1,5 @@
 # CoveoExchange365Federation
 
-> **Now a public repo : [CoveoOffice365Federation](https://github.com/coveo-labs/CoveoOffice365Federation) **
-
 Federated Search option between Coveo and Exchange 365/Online using Graph APIs.
 
 ## Description
