@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    if (window && window.opener) {
+      let token = 'abc-1234';
+      let params = location.hash.split('&');
+      let reAccessToken = /^[#&]*access_token=(.+)/;
+      params.forEach(p => {
+        if (reAccessToken.test(p)) {
+          token = RegExp.$1;
+        }
+      });
+
+      // extract token and give to parent window.
+      window.opener.postMessage(location.hash, '*');
+      setTimeout(function () {
+        window.close();
+      }, 1500);
+    }
+  </script>
+</head>
+
+<body>
+  <i>You should be redirected to your application now.</i>
+</body>
+
+</html>
